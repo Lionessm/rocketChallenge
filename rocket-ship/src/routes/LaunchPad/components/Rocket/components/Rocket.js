@@ -1,4 +1,4 @@
-import React, { useState, Component, PureComponent } from 'react';
+import React, { useState, PureComponent } from 'react';
 import RocketCore from './RocketCore';
 
 
@@ -19,7 +19,7 @@ export class FunctionalRocket extends PureComponent {
 }
 
 
-export class ClassRocket extends Component {
+export class ClassRocket extends PureComponent {
   constructor() {
     super();
 
