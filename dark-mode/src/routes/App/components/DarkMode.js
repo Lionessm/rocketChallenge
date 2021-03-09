@@ -26,7 +26,7 @@ const ThemeChanger = () => {
     return (
         <div>
             <button onClick={handleChange} className="app__dark-mode-btn icon level-right">
-                {themeState ? <FontAwesomeIcon icon={faMoon}/> : <FontAwesomeIcon icon={faSun}/>}
+                {themeState ?  <FontAwesomeIcon icon={faSun}/> :  <FontAwesomeIcon icon={faMoon}/>}
             </button>
         </div>
     )
