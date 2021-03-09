@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React, { useState, Component, PureComponent } from 'react';
 import RocketCore from './RocketCore';
 
 export function FunctionalRocket() {
@@ -6,6 +6,7 @@ export function FunctionalRocket() {
 
   return <RocketCore initialLaunchTime={initialLaunchTime} />;
 }
+
 
 export class ClassRocket extends Component {
   constructor() {
@@ -22,3 +23,5 @@ export class ClassRocket extends Component {
     return <RocketCore initialLaunchTime={initialLaunchTime} />;
   }
 }
+
+
