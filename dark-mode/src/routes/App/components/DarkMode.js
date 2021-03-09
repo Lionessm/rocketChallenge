@@ -22,10 +22,11 @@ const ThemeChanger = () => {
         const getTheme = localStorage.getItem('Theme');
         if (getTheme === 'dark') return  document.body.classList.add('dark-mode');
     })
+
     return (
         <div>
             <button onClick={handleChange} className="app__dark-mode-btn icon level-right">
-                {themeState ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
+                {themeState ? <FontAwesomeIcon icon={faMoon}/> : <FontAwesomeIcon icon={faSun}/>}
             </button>
         </div>
     )
