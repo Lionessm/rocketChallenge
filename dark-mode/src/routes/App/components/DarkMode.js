@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMoon} from "@fortawesome/free-solid-svg-icons";
 
 const ThemeChanger = () => {
     const [themeState, setThemeState] = useState(false);
@@ -20,7 +22,10 @@ const ThemeChanger = () => {
     })
     return (
         <div>
-            <button onClick={handleChange}>{themeState ? 'Light Mode' : 'Dark Mode'}</button>
+            <button onClick={handleChange} className="app__dark-mode-btn icon level-right">
+                {themeState ? 'Light Mode' : 'Dark Mode'}
+                <FontAwesomeIcon icon={faMoon} />
+            </button>
         </div>
     )
 }
