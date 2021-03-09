@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon} from "@fortawesome/free-solid-svg-icons";
+import {faSun} from "@fortawesome/free-solid-svg-icons";
 
 const ThemeChanger = () => {
     const [themeState, setThemeState] = useState(false);
@@ -14,6 +15,7 @@ const ThemeChanger = () => {
             localStorage.setItem('Theme', 'light');
             document.body.classList.remove('dark-mode');
         }
+
     }
 
     useEffect(() => {
@@ -23,8 +25,7 @@ const ThemeChanger = () => {
     return (
         <div>
             <button onClick={handleChange} className="app__dark-mode-btn icon level-right">
-                {themeState ? 'Light Mode' : 'Dark Mode'}
-                <FontAwesomeIcon icon={faMoon} />
+                {themeState ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
             </button>
         </div>
     )
